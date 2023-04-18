@@ -4,33 +4,42 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
-
   <header class="main-header">
     <a class="main-header__logo logo" href="index.html">
-      <img src="img/mishka-logo-mobile.svg" width="85" height="36" alt="Логотип сайта">
+      <picture>
+        <img src="img/mishka-logo-mobile.svg" width="85" height="36" alt="Логотип сайта">
+      </picture>
     </a>
-    <nav class="main-nav">
+    <nav class="main-header__nav main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav_link" href="catalog.html">Каталог товаров</a>
+        <ul class="main-nav__list nav-list">
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav_link" href="form.html">Вязание на заказ</a>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav_link" href="#">Поиск по сайту</a>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Поиск по сайту</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav_link" href="#">Корзина: пока пуста</a>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Корзина: пока пуста</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Новые поступления</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Распродажа</a>
           </li>
         </ul>
+        <p>Бесплатная доставка по России</p>
       </div>
     </nav>
   </header>
@@ -71,13 +80,13 @@
         </table>
         <img src="img/triple-set-mobile.jpg" width="260" height="315" alt="3 вязаные корзины в руках">
         <p class="price">Цена: 990 руб.</p>
-        <a class="button_card button" href="#">Заказать</a>
+        <a class="button-card button" href="#">Заказать</a>
       </div>
     </section>
     <section class="about-product">
       <h2 class="about-product__title title">Коротко о нас:</h2>
       <ul class="about-product__list">
-        <li class="about-product__item">Экологически чистые материалы</li>
+        <li class="about-product__item about-product__item--eco">Экологически чистые материалы</li>
         <li class="about-product__item">Скандинавский стиль по российской цене</li>
         <li class="about-product__item">Увеличивает лайки на фотографиях</li>
         <li class="about-product__item">Связано вручную с любовью и умилением</li>
@@ -148,7 +157,16 @@
             <address>г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</address>
           </li>
         </ul>
-        <img src="img/map-mobile.jpg" alt="Карта с адресом магазина">
+        <div class="map">
+          <div class="map__google">
+            <iframe src="" frameborder="0"></iframe>
+          </div>
+          <div class="map__img">
+            <picture>
+              <img src="img/map-mobile.jpg" alt="Карта с адресом магазина">
+            </picture>
+          </div>
+        </div>
         <a href="#" class="contacts__write button">Напишите нам</a>
       </div>
     </section>
