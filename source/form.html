@@ -8,30 +8,38 @@
 </head>
 
 <body class="page__body">
-
   <header class="main-header">
     <a class="main-header__logo logo" href="index.html">
-      <img src="img/mishka-logo-mobile.svg" width="85" height="36" alt="Логотип сайта">
+      <picture>
+        <img src="img/mishka-logo-mobile.svg" width="85" height="36" alt="Логотип сайта">
+      </picture>
     </a>
-    <nav class="main-nav">
+    <nav class="main-header__nav main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav_link" href="catalog.html">Каталог товаров</a>
+        <ul class="main-nav__list nav-list">
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav_link main-nav_link--active" href="form.html">Вязание на заказ</a>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav_link" href="#">Поиск по сайту</a>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Поиск по сайту</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav_link" href="#">Корзина: пока пуста</a>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Корзина: пока пуста</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Новые поступления</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="#">Распродажа</a>
           </li>
         </ul>
+        <p class="visually-hidden">Бесплатная доставка по России</p>
       </div>
     </nav>
   </header>
@@ -47,7 +55,7 @@
           <ul class="filter__list">
             <li class="filter__item">
               <label class="control">
-                <input class="visually-hidden control__input" type="radio" name="product-type">
+                <input class="visually-hidden control__input" type="radio" name="product-type" checked>
                 <span class="control__mark-radio"></span>
                 <span class="control__label">Аксессуар для интерьера</span>
               </label>
@@ -109,25 +117,25 @@
         </fieldset>
         <fieldset class="filter__group">
           <legend class="filter__title">Фио</legend>
-          <p class="field_group">
-            <label class="visually-hidden" for="first-name">Имя:</label>
-            <input class="field__first-name field" type="text" id="first-name" name="first-name"
+          <p class="field__group field-group">
+            <label class="field-group__title" for="first-name">Имя:</label>
+            <input class="field-group__first-name field" type="text" id="first-name" name="first-name"
               placeholder="Введите ваше имя*" required>
           </p>
-          <p class="field_group">
-            <label class="visually-hidden" for="last-name">Фамилия:</label>
-            <input class="field__last-name field" type="text" id="last-name" name="last-name"
+          <p class="field__group field-group">
+            <label class="field-group__title" for="last-name">Фамилия:</label>
+            <input class="field-group__last-name field" type="text" id="last-name" name="last-name"
               placeholder="Укажите фамилию*" required>
           </p>
-          <p class="field_group">
-            <label class="visually-hidden" for="name">Отчество:</label>
-            <input class="field__middle-name field" type="text" id="middle-name" name="middle-name"
+          <p class="field__group field-group">
+            <label class="field-group__title" for="name">Отчество:</label>
+            <input class="field-group__middle-name field" type="text" id="middle-name" name="middle-name"
               placeholder="Отчество, если желаете">
           </p>
         </fieldset>
         <fieldset class="filter__group">
           <legend class="filter__title">Тел</legend>
-          <p class="field_group">
+          <p class="field__group field-group">
             <label class="visually-hidden" for="phone"> Телефон </label>
             <input class="field__phone field" type="tel" id="phone" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
               required>
@@ -135,20 +143,20 @@
         </fieldset>
         <fieldset class="filter__group">
           <legend class="filter__title">E-mail</legend>
-          <p class="field_group">
+          <p class="field__group field-group">
             <label class="visually-hidden" for="email">Элетронная почта </label>
             <input class="field__email field" placeholder="Ваш Email*" type="email" name="email" id="email" required>
           </p>
         </fieldset>
         <fieldset class="filter__group">
           <legend class="filter__title">Доп</legend>
-          <p class="field_group">
+          <p class="field__group field-group">
             <label class="visually-hidden" for="form-text"> Дополнительная информация </label>
-            <textarea class="field__form form__text" id="form-text" name="form-text"
+            <textarea class="field-group__form-text" id="form-text" name="form-text"
               placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </p>
         </fieldset>
-        <p class="fields-required">*Поля обязательны для заполнения</p>
+        <p class="filter__fields-required">*Поля обязательны для заполнения</p>
         <button class="filter__button button">Отправить заказ</button>
       </form>
     </div>
