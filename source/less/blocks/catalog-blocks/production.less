@@ -1,11 +1,36 @@
+.production {
+  padding: 0 30px;
+  margin: 0;
+}
+
+.production__wrapper {
+  border: 1px solid @base-border;
+}
+
 .production__title {
+  padding: 24px 0 25px 91px;
+  position: relative;
+  margin: 0;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+}
+
+.production__title::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/catalog/video.svg");
+  background-repeat: no-repeat;
+  top: 36px;
+  left: 33px;
+  width: 32px;
+  height: 22px;
 }
 
 .production__discription {
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
+  margin: 0;
+  padding: 31px 30px 41px 33px;
 }

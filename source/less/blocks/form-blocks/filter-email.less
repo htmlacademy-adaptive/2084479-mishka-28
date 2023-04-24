@@ -1,0 +1,21 @@
+.filter-email__title {
+  padding-right: 10px;
+  text-transform: uppercase;
+  color: @green-light;
+  line-height: 16px;
+}
+
+.input-email {
+  position: relative;
+}
+
+.input-email::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/icons/mail.svg");
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 21px;
+  bottom: 15px;
+  right: 3px;
+}

@@ -1,15 +1,32 @@
+.catalog {
+  margin-bottom: 57px;
+}
+
 .catalog__title {
   background-color: @footer-color;
   font-size: 27px;
   line-height: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 73px 30px;
 }
 
 .catalog__list {
   .list-reset;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 30px;
+  padding: 0 30px;
+}
+
+.catalog__item {
+  margin-bottom: 30px;
+  border: 1px solid @base-border;
 }
 
 .catalog__button {
-  line-height: 16px;
-  padding: 18px;
+  margin: 0 34px 32px;
+  min-width: 192px;
 }
-
