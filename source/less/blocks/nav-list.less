@@ -1,3 +1,28 @@
 .nav-list {
   .list-reset;
+  display: block;
+  background-color: @base-color;
 }
+
+.nav-list__item {
+  display: flex;
+  text-align: center;
+
+  &--new-products,
+  &--sale {
+    display: none;
+  }
+}
+
+.nav-list__link {
+  display: flex;
+  align-items: center;
+  box-shadow:
+    0 1px 0 @base-border,
+    inset 0 1px 0 @base-border;
+  width: 100%;
+  min-height: 79px;
+  padding-left: 76px;
+  padding-top: 1px;
+}
+

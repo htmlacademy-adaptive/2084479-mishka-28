@@ -1,27 +1,47 @@
 .contacts {
   margin-top: 38px;
-  margin-bottom: 39px;
+  margin-bottom: 38px;
+}
+
+.contacts__wrapper {
   padding: 0 30px;
 }
 
 .contacts__list {
   .list-reset;
   color: @alternate-text;
+  padding-top: 28px;
+  row-gap: 41px;
 }
 
 .contacts__item {
+  display: grid;
+  grid-template-columns: 76px 183px;
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
+  padding-bottom: 29px;
 }
 
-.contacts-item__list h3 {
+.contacts__item:last-child {
+  padding-bottom: 0;
+}
+
+.contacts__item h3 {
   margin: 0;
   padding: 0;
   font-weight: 400;
   font-size: 14px;
 }
 
+.contacts__link--email {
+  border-bottom: 1px solid @green-light;
+}
+
 address {
   font-style: normal;
+}
+
+.contacts__button {
+  margin: 0 30px;
 }

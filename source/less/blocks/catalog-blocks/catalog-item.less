@@ -1,14 +1,44 @@
+.catalog-item__wrapper {
+  display: block;
+  align-items: center;
+  padding: 25px 28px 0;
+  min-height: 105px;
+}
+
 .catalog-item__link {
   line-height: 24px;
 }
 
 .catalog-item__discription {
+  padding: 4px 0 18px;
+  margin: 0;
   font-weight: 400;
   font-size: 13px;
   line-height: 30px;
+  border-bottom: 1px solid @base-border;
+}
+
+.catalog-item__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 27px 25px;
 }
 
 .catalog-item__price {
+  position: relative;
+  margin: 0;
   font-size: 15px;
   line-height: 24px;
+}
+
+.catalog-item__button {
+  position: relative;
+  width: 20px;
+  height: 19px;
+}
+
+.catalog-item__card-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
