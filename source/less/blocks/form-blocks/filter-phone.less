@@ -7,12 +7,14 @@
   line-height: 16px;
 }
 
-.input-phone {
+.filter-phone__input-phone {
   position: relative;
-  padding-top: 22px;
+  margin: 0;
+  padding: 0;
+  padding-top: 19px;
 }
 
-.input-phone::before {
+.filter-phone__input-phone::before {
   position: absolute;
   content: "";
   background-image: url("../img/icons/phone.svg");
@@ -21,4 +23,27 @@
   height: 24px;
   top: 16px;
   right: 7px;
+}
+
+.filter-phone__container {
+  position: relative;
+  padding-bottom: 36px;
+}
+
+.filter-phone__container::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 260px;
+  border-bottom: 2px solid @base-text;
+  top: 35px;
+  left: 0;
+}
+
+.filter-phone__input {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  line-height: 18px;
+  border: none;
 }

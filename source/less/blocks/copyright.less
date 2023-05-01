@@ -1,11 +1,22 @@
 .copyright {
   display: flex;
-  padding: 22px 30px;
+  padding: 21px;
   align-items: center;
   font-size: 19px;
   line-height: 18px;
 }
 
 .copyright__text {
-  padding-right: 27px;
+  padding-right: 26px;
+}
+
+@media (min-width: @tablet) {
+  .copyright {
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .copyright__text {
+    padding-top: 9px;
+  }
 }

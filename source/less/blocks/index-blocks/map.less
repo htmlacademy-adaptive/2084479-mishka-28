@@ -1,0 +1,40 @@
+.map {
+  height: 454px;
+  position: relative;
+  margin-bottom: 42px;
+}
+
+.map__google-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.map__google {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.map__img-container {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.map__img {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: @tablet) {
+  .map {
+    margin-bottom: 60px;
+  }
+}

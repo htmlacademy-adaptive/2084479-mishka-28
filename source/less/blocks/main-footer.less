@@ -2,5 +2,29 @@
   display: flex;
   justify-content: center;
   background-color: @footer-color;
+  flex-wrap: wrap;
 }
 
+.main-footer__logo {
+  display: none;
+}
+
+@media (min-width: @tablet) {
+  .main-footer {
+    padding: 50px;
+    position: relative;
+    min-height: 143px;
+    justify-content: space-between;
+  }
+
+  .main-footer__wrapper {
+    display: flex;
+    min-width: 668px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .main-footer__logo {
+    display: block;
+  }
+}

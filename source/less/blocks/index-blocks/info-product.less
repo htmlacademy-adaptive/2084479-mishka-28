@@ -84,3 +84,44 @@
   left: 3px;
 }
 
+@media (min-width: @tablet) {
+  .info-product {
+    margin-top: 57px;
+    padding: 0 50px;
+  }
+
+  .info-product__title {
+    padding-bottom: 14px;
+  }
+
+  .info-product__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 28px 70px;
+    font-size: 20px;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .info-product__item {
+    min-width: 265px;
+  }
+
+  .info-product__item--eco {
+    order: -1;
+  }
+
+  .info-product__item--like {
+    order: 1;
+  }
+
+  .info-product__item--handmade {
+    order: -1;
+  }
+
+  .info-product__item--gift {
+    order: 1;
+  }
+}

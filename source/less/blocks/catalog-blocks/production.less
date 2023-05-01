@@ -34,3 +34,22 @@
   margin: 0;
   padding: 31px 30px 41px 33px;
 }
+
+.production__image {
+  position: relative;
+  z-index: 1;
+}
+
+.production__image::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/catalog/play");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  width: 101px;
+  height: 77px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}

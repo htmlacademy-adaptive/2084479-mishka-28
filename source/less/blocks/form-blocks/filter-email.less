@@ -1,21 +1,46 @@
 .filter-email__title {
-  padding-right: 10px;
+  padding: 0;
+  padding-right: 20px;
   text-transform: uppercase;
   color: @green-light;
   line-height: 16px;
 }
 
-.input-email {
+.filter-email__input-email {
   position: relative;
 }
 
-.input-email::before {
+.filter-email__input-email::before {
   position: absolute;
   content: "";
   background-image: url("../img/icons/mail.svg");
   background-repeat: no-repeat;
   width: 32px;
   height: 21px;
-  bottom: 15px;
+  top: 2px;
   right: 3px;
+}
+
+.filter-email__container {
+  position: relative;
+  padding-bottom: 34px;
+  padding-top: 2px;
+}
+
+.filter-email__container::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 260px;
+  border-bottom: 2px solid @base-text;
+  top: 36px;
+  left: 0;
+}
+
+.filter-email__input {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  line-height: 18px;
+  border: none;
 }
