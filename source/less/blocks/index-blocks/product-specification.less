@@ -1,3 +1,19 @@
+.product-specification {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-specification__discription {
+  margin: 0;
+  padding: 16px 0 22px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: @alternate-text;
+}
+
 .product-specification__list {
   .list-reset;
   font-size: 15px;
@@ -22,3 +38,19 @@
   color: @alternate-text;
 }
 
+@media (min-width: @tablet) {
+  .product-specification {
+    width: 44%;
+    padding-top: 21px;
+    align-items: flex-start;
+  }
+
+  .product-specification__discription {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .product-specification__list {
+    padding-top: 18px;
+  }
+}

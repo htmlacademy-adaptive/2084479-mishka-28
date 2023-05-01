@@ -15,32 +15,44 @@
         <img src="img/mishka-logo-mobile.svg" width="85" height="36" alt="Логотип сайта">
       </picture>
     </a>
-    <nav class="main-header__nav main-nav">
+    <nav class="main-header__nav main-nav main-nav--close">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list nav-list">
           <li class="nav-list__item">
-            <a class="nav-list__link" href="catalog.html">Каталог товаров</a>
+            <a class="nav-list__link nav-list__link--catalog" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__link" href="form.html">Вязание на заказ</a>
+            <a class="nav-list__link nav-list__link--order" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="#">Поиск по сайту</a>
+          <li class="nav-list__item  nav-list__item--search">
+            <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.2"
+                d="M17.6932 16.0568L14.2159 12.5795C15.2386 11.25 15.75 9.61364 15.75 7.875C15.75 3.47727 12.2727 0 7.875 0C3.47727 0 0 3.47727 0 7.875C0 12.2727 3.47727 15.75 7.875 15.75C9.61364 15.75 11.25 15.1364 12.5795 14.2159L16.0568 17.6932C16.2614 17.8977 16.4659 18 16.875 18C17.4886 18 18 17.4886 18 16.875C18 16.6705 17.8977 16.3636 17.6932 16.0568ZM2.25 7.875C2.25 4.80682 4.80682 2.25 7.875 2.25C10.9432 2.25 13.5 4.80682 13.5 7.875C13.5 10.9432 10.9432 13.5 7.875 13.5C4.80682 13.5 2.25 10.9432 2.25 7.875Z"
+                fill="black" />
+            </svg>
+            <a class="nav-list__link nav-list__link--search" href="#">Поиск по сайту</a>
           </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="#">Корзина: пока пуста</a>
+          <li class="nav-list__item  nav-list__item--card">
+            <svg width="20" height="19" viewBox="0 0 20 19" aria-hidden="true" focusable="false" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.2"
+                d="M19.2271 7.23811H15.8454L12.5604 0.402108C12.3672 -9.09136e-06 11.9807 -0.100526 11.5942 0.100532C11.2077 0.301591 11.1111 0.703707 11.3043 1.10582L14.2995 7.23811H5.50723L8.50241 1.10582C8.69565 0.703707 8.50242 0.301591 8.21257 0.100532C7.82609 -0.100526 7.43962 0.10052 7.24638 0.402108L3.96133 7.23811H0.772936C0.386462 7.23811 0 7.53968 0 8.04233C0 8.44445 0.289844 8.84655 0.772936 8.84655H0.966184L1.83574 11.8624C1.64251 11.963 1.54587 12.164 1.54587 12.4656C1.54587 12.8677 1.83574 13.1693 2.22221 13.1693L3.86474 19H16.1353L17.7778 13.1693C18.1643 13.1693 18.4541 12.8677 18.4541 12.4656C18.4541 12.2645 18.3575 11.963 18.1643 11.8624L19.0338 8.84655H19.2271C19.6135 8.84655 20 8.54498 20 8.04233C20 7.53968 19.6135 7.23811 19.2271 7.23811ZM14.8792 17.3915H4.83092L3.67149 13.0688H16.1353L14.8792 17.3915ZM16.4251 11.5609H3.1884L2.41546 8.74605H17.1981L16.4251 11.5609Z"
+                fill="black" />
+            </svg>
+            <a class="nav-list__link nav-list__link--card" href="#">Корзина: пока пуста</a>
           </li>
-          <li class="nav-list__item">
+          <li class="nav-list__item nav-list__item--new-products">
             <a class="nav-list__link" href="#">Новые поступления</a>
           </li>
-          <li class="nav-list__item">
+          <li class="nav-list__item nav-list__item--sale">
             <a class="nav-list__link" href="#">Распродажа</a>
           </li>
         </ul>
-        <p class="visually-hidden">Бесплатная доставка по России</p>
+        <p class="main-nav__text visually-hidden">Бесплатная доставка по России</p>
       </div>
     </nav>
   </header>
@@ -140,22 +152,26 @@
           </fieldset>
           <fieldset class="filters__group filter-phone">
             <legend class="filter-phone__title">Тел</legend>
-            <p class="input-text input-phone">
+            <p class="filter-phone__input-phone">
+            <div class="filter-phone__container">
               <label class="visually-hidden" for="phone"> Телефон </label>
-              <input class="input-text__input" type="tel" id="phone" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
+              <input class="filter-phone__input" type="tel" id="phone" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
                 required>
+            </div>
             </p>
           </fieldset>
           <fieldset class="filters__group filter-email">
             <legend class="filter-email__title">E-mail</legend>
-            <p class="input-text input-email">
+            <p class="filter-email__input-email">
+            <div class="filter-email__container">
               <label class="visually-hidden" for="email">Элетронная почта </label>
-              <input class="input-text__input" placeholder="Ваш Email*" type="email" name="email" id="email" required>
+              <input class="filter-email__input" placeholder="Ваш Email*" type="email" name="email" id="email" required>
+            </div>
             </p>
           </fieldset>
           <fieldset class="filters__group form-text">
             <legend class="form-text__title">Доп</legend>
-            <p class="input-text">
+            <p class="form-text__add-input">
               <label class="visually-hidden" for="form-text"> Дополнительная информация </label>
               <textarea class="form-text__input" id="form-text" name="form-text"
                 placeholder="Опишите все ваши пожелания к заказу"></textarea>
@@ -213,6 +229,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

@@ -20,6 +20,11 @@ body {
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   text-decoration: none;
   color: @base-text;
@@ -33,11 +38,15 @@ a {
 }
 
 .button {
+  margin: 0 auto;
+  padding: 0;
   display: flex;
   justify-content: center;
   padding-top: 14px;
   padding-bottom: 14px;
   font-size: 18px;
+  font-weight: 700;
+  width: 260px;
   text-transform: uppercase;
   background-color: @base-color;
   color: @alternate-text;
@@ -55,4 +64,22 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+
+@media (min-width: @tablet) {
+  body {
+    min-width: 768px;
+  }
+
+  .title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: @desktop) {
+  body {
+    min-width: 1150px;
+  }
 }

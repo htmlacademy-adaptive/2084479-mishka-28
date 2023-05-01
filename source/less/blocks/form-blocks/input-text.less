@@ -1,7 +1,17 @@
 .input-text {
+  position: relative;
   margin: 0;
-  padding-bottom: 22px;
+  padding-bottom: 24px;
   line-height: 18px;
+}
+
+.input-text::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 260px;
+  border-bottom: 2px solid @base-text;
+  bottom: 22px;
 }
 
 .input-text__label {
@@ -15,7 +25,6 @@
   font-size: 17px;
   line-height: 18px;
   border: none;
-  border-bottom: 2px solid @base-text;
   color: rgb(0, 0, 0, 0.3);
   padding: 0;
   padding-bottom: 14px;
