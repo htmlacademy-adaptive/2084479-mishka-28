@@ -5,20 +5,14 @@
 .main-nav__wrapper {
   position: relative;
   width: 100%;
-  min-height: 79px;
   text-align: center;
   border-top: 1px solid #ececec;
   overflow: hidden;
-  display: flex;
   background-color: #ffffff;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
 }
 
 .main-nav--js .main-nav__wrapper {
   position: absolute;
-  top: 78px;
 }
 
 
@@ -33,7 +27,7 @@
   background-position: center;
   background-color: transparent;
   border: none;
-  top: 30px;
+  top: -52px;
   right: 30px;
   padding: 0;
   width: 21px;
@@ -62,7 +56,14 @@
   }
 
   .main-nav__wrapper {
-    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    border: none;
+    flex-direction: row;
+    background: transparent;
+    z-index: 10;
+    overflow: visible;
   }
 
   .main-nav--js .main-nav__wrapper {
@@ -71,14 +72,14 @@
     position: relative;
     border: none;
     flex-direction: row;
-    top: 0;
+    background: transparent;
   }
 
   .main-nav__text {
+    position: absolute;
     display: block;
     margin: 0;
-    margin-left: auto;
-    padding-right: 50px;
-    padding-top: 21px;
+    right: 50px;
+    top: 20px;
   }
 }

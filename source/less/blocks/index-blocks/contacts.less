@@ -93,9 +93,24 @@ address {
     padding-left: 26px;
   }
 
+  .contacts__link--email {
+    &:hover,
+    &:active {
+      color: #46c1ae;
+    }
+  }
+
   .contacts__link--email::before {
     width: 202px;
     bottom: 30px;
+  }
+
+  .contacts__link--email:hover::before {
+    border-color: #46c1ae;
+  }
+
+  .contacts__link--email:active::before {
+    opacity: 0;
   }
 
   .contacts__button {

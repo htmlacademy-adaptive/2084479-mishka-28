@@ -51,6 +51,15 @@ a {
   background-color: @base-color;
   color: @alternate-text;
   border: 2px solid @alternate-text;
+
+  &:hover {
+    background-color: @alternate-text;
+    color: @base-color;
+  }
+
+  &:active {
+    color: fade(@base-color, 30%);
+  }
 }
 
 .visually-hidden {
@@ -80,6 +89,7 @@ a {
 
 @media (min-width: @desktop) {
   body {
-    min-width: 1150px;
+    width: 1150px;
+    margin: 0 auto;
   }
 }

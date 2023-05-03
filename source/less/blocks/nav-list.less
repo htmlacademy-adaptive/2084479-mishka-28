@@ -2,24 +2,12 @@
   .list-reset;
   display: inline-block;
   text-align: left;
-
-  &--sell {
-    display: none;
-  }
-}
-
-.nav-list__item {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  min-height: 79px;
-  padding-left: 77px;
-  padding-top: 2px;
+  min-width: 320px;
   position: relative;
 }
 
-.nav-list__item-catalog {
-  margin: 0;
+.nav-list__item {
+  position: relative;
 }
 
 .nav-list__item::before {
@@ -33,59 +21,103 @@
   bottom: -1px;
 }
 
-.nav-list__item--search {
-  padding-left: 33px;
+.nav-list__link {
+  padding: 28px 10px 26px 77px;
+  position: relative;
+  display: block;
 }
 
-.nav-list__link--search {
-  padding-left: 25px;
+.nav-list__svg {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.nav-list__item--card {
-  padding-left: 31px;
+.nav-list__item--for-desktop {
+  display: none;
 }
-
-.nav-list__link--card {
-  padding-left: 25px;
-}
-
 
 @media (min-width: @tablet) {
   .nav-list {
+    width: 100%;
     display: flex;
+    box-sizing: border-box;
+    padding-right: 392px;
     flex-wrap: wrap;
-
-    &--sell {
-      display: none;
-    }
-
-    &--user {
-      order: -1;
-      position: relative;
-      margin-left: auto;
-      padding: 33px 50px 31px 313px;
-    }
+    padding-left: 34px;
 
     &--catalog {
-      width: 400px;
-      padding-left: 50px;
-      padding-top: 21px;
-      font-size: 15px;
-    }
-  }
-
-  .nav-list__item {
-    padding: 0;
-    width: auto;
-    min-height: auto;
-    align-items: flex-start;
-
-    &--catalog {
-      padding-right: 37px;
+      background: #f1f1f1;
     }
   }
 
   .nav-list__item::before {
     display: none;
+  }
+
+  .nav-list__item--special {
+    position: absolute;
+    top: -77px;
+    right: 0;
+  }
+
+  .nav-list__item--search {
+    right: 316px;
+  }
+
+  .nav-list__item--card {
+    right: 31px;
+  }
+
+  .nav-list__svg:hover,
+  .nav-list__svg:focus {
+    opacity: 1;
+    color: @green-light;
+  }
+
+  .nav-list__svg:active {
+    fill: @green-light;
+    opacity: 0.3;
+  }
+
+  .nav-list__link {
+    padding: 22px 19px 25px 17px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+
+    &--search {
+      width: 80px;
+      height: 88px;
+    }
+
+    &--card {
+      font-size: 17px;
+      padding-left: 84px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .nav-list__svg {
+    top: 33px;
+    opacity: 0.2;
+  }
+
+  .nav-list__text-tablet {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: @desktop) {
+  .nav-list__item--for-desktop {
+    display: block;
   }
 }
