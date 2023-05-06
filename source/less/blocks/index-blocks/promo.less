@@ -1,6 +1,7 @@
 .promo {
   position: relative;
   margin-top: 31px;
+  overflow: hidden;
 }
 
 .promo::after {
@@ -8,7 +9,7 @@
   content: "";
   background-image: url("../img/zigzag-line-mobile.svg");
   background-repeat: repeat;
-  width: 100%;
+  width: 100vw;
   height: 6px;
   bottom: 0;
 }
@@ -33,9 +34,11 @@
   color: @alternate-text;
 }
 
+// Tablet
 
 @media (min-width: @tablet) {
   .promo__wrapper {
+    overflow: hidden;
     position: relative;
     padding: 10px 50px 68px;
   }
@@ -74,5 +77,51 @@
   .promo::after {
     background-image: url("../img/zigzag-line-tablet.svg");
     height: 17px;
+  }
+}
+
+// Desktop
+
+@media (min-width: @desktop) {
+  .promo {
+    margin-top: 54px;
+  }
+
+  .promo::after {
+    background-image: url("../img/zigzag-line-desktop.svg");
+    height: 23px;
+    width: 1050px;
+    left: 50px;
+  }
+
+  .promo__wrapper {
+    padding: 61px 95px 95px;
+  }
+
+  .promo__title-container {
+    position: relative;
+    z-index: 10;
+    justify-content: flex-start;
+  }
+
+  .promo__title {
+    padding-left: 31px;
+  }
+
+  .promo__picture {
+    width: 525px;
+    height: 636px;
+    top: 0;
+    background-image: url("../img/triple-set-desktop.jpg");
+  }
+
+  .promo__price {
+    padding-top: 82px;
+    padding-left: 74px;
+  }
+
+  .promo__text {
+    padding-top: 8px;
+    order: -1;
   }
 }

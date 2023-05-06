@@ -84,6 +84,8 @@
   left: 3px;
 }
 
+// Tablet
+
 @media (min-width: @tablet) {
   .info-product {
     margin-top: 57px;
@@ -95,10 +97,9 @@
   }
 
   .info-product__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 28px 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 0;
     font-size: 20px;
     line-height: 22px;
     padding: 0;
@@ -123,5 +124,17 @@
 
   .info-product__item--gift {
     order: 1;
+  }
+}
+
+// Desktop
+
+@media (min-width: @desktop) {
+  .info-product {
+    margin: 68px 175px;
+  }
+
+  .info-product__title {
+    padding-bottom: 12px;
   }
 }

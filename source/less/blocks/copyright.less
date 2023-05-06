@@ -10,6 +10,20 @@
   padding-right: 26px;
 }
 
+.copyright__link-svg {
+  fill: @green-light;
+}
+
+.copyright__link-svg:hover {
+  fill: #46c1ae;
+}
+
+.copyright__link-svg:active {
+  opacity: 0.3;
+}
+
+// Tablet
+
 @media (min-width: @tablet) {
   .copyright {
     align-items: flex-start;
@@ -18,5 +32,13 @@
 
   .copyright__text {
     padding-top: 9px;
+  }
+}
+
+// Desktop
+
+@media (min-width: @desktop) {
+  .copyright__text {
+    padding-right: 30px;
   }
 }

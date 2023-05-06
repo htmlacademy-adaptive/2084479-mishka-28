@@ -7,7 +7,7 @@
 
 .product-specification__discription {
   margin: 0;
-  padding: 16px 0 22px;
+  padding: 16px 0 23px;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
@@ -38,6 +38,8 @@
   color: @alternate-text;
 }
 
+// Tablet
+
 @media (min-width: @tablet) {
   .product-specification {
     width: 44%;
@@ -52,5 +54,23 @@
 
   .product-specification__list {
     padding-top: 18px;
+  }
+}
+
+// Desktop
+
+@media (min-width: @desktop) {
+  .product-specification {
+    margin-left: 131px;
+    width: 292px;
+  }
+
+  .product-specification__discription {
+    padding-bottom: 33px;
+  }
+
+  .product-specification__item {
+    grid-template-columns: 98px 192px;
+    padding-bottom: 13px;
   }
 }

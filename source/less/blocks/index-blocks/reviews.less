@@ -9,9 +9,10 @@
   content: "";
   background-image: url("../img/zigzag-line-mobile.svg");
   background-repeat: repeat;
-  width: 100%;
+  width: 1050px;
   height: 6px;
   bottom: 0;
+  left: 0;
 }
 
 .reviews__cantainer {
@@ -119,12 +120,15 @@
   left: 35px;
 }
 
+// Tablet
+
 @media (min-width: @tablet) {
   .reviews {
     background-image: url("../img/review-tablet.jpg");
     background-repeat: no-repeat;
     margin-top: 81px;
     padding: 83px 0 104px;
+    overflow: hidden;
   }
 
   .reviews::after {
@@ -201,5 +205,41 @@
     width: 175px;
     top: 80px;
     right: 50px;
+  }
+}
+
+// Desktop
+
+@media (min-width: @desktop) {
+  .reviews {
+    margin-left: 50px;
+    margin-top: 89px;
+    padding: 77px 50px 155px 174px;
+  }
+
+  .reviews::after {
+    background-image: url("../img/zigzag-line-desktop.svg");
+    height: 23px;
+  }
+
+  .reviews__title {
+    padding: 0;
+  }
+
+  .reviews__cantainer {
+    padding: 0;
+  }
+
+  .reviews__text {
+    padding-top: 37px;
+    padding-bottom: 43px;
+  }
+
+  .reviews__author-name {
+    font-size: 17px;
+  }
+
+  .reviews__button-slider {
+    bottom: 150px;
   }
 }
