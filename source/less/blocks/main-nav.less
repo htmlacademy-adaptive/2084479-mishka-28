@@ -6,15 +6,14 @@
   position: relative;
   width: 100%;
   text-align: center;
-  border-top: 1px solid #ececec;
+  border-top: 1px solid @base-border;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: @base-color;
 }
 
 .main-nav--js .main-nav__wrapper {
   position: absolute;
 }
-
 
 .main-nav--close .main-nav__wrapper {
   display: none;
@@ -50,6 +49,8 @@
   font-size: 15px;
 }
 
+// Tablet
+
 @media (min-width: @tablet) {
   .main-nav--js .main-nav__toggle {
     display: none;
@@ -83,3 +84,21 @@
     top: 20px;
   }
 }
+
+// Desktop
+
+@media (min-width: @desktop) {
+  .main-nav--js .main-nav__wrapper {
+    padding-left: 50px;
+  }
+
+  .main-nav {
+    z-index: 5;
+  }
+
+  .main-nav__text {
+    right: 51px;
+    top: 109px;
+  }
+}
+

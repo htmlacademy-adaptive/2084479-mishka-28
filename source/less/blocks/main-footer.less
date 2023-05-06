@@ -9,6 +9,12 @@
   display: none;
 }
 
+.main-footer__logo-svg {
+  fill: @base-text;
+}
+
+// Tablet
+
 @media (min-width: @tablet) {
   .main-footer {
     padding: 50px;
@@ -26,5 +32,22 @@
 
   .main-footer__logo {
     display: block;
+  }
+
+  .main-footer__logo-svg:hover {
+    fill: #46c1ae;
+  }
+
+  .main-footer__logo-svg:active {
+    opacity: 0.3;
+  }
+}
+
+// Desktop
+
+@media (min-width: @desktop) {
+  .main-footer {
+    margin: 0 auto;
+    width: 1150px;
   }
 }
