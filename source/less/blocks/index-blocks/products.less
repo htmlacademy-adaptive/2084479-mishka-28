@@ -1,6 +1,6 @@
 .products {
   position: relative;
-  background-color: #f9f9f9;
+  background-color: #fafafa;
 }
 
 .products__wrapper {
@@ -17,11 +17,15 @@
   left: 50%;
   transform: translateX(-50%);
   top: 0;
-  background-image: url("../img/hero-mobile.jpg");
+  background-image: url("../img/index/hero-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center -15px;
   background-size: auto 131%;
   z-index: 1;
+}
+
+@media (min-resolution: 2dppx) {
+  background-image: url("../img/index/hero-mobile@2x.jpg");
 }
 
 .products__title {
@@ -40,7 +44,7 @@
 }
 
 .products__item {
-  min-width: 140px;
+  min-width: 50%;
 }
 
 .products__item--interiors {
@@ -61,7 +65,7 @@
 .products__link--interiors::before {
   position: absolute;
   content: "";
-  background-image: url("../img/icons/interior.svg");
+  background-image: url("../img/index/interior.svg");
   background-repeat: no-repeat;
   width: 40px;
   height: 62px;
@@ -78,7 +82,7 @@
 .products__link--toys::before {
   position: absolute;
   content: "";
-  background-image: url("../img/icons/toy.svg");
+  background-image: url("../img/index/toy.svg");
   background-repeat: no-repeat;
   width: 60px;
   height: 60px;
@@ -98,25 +102,15 @@
   .products__wrapper::before {
     background-position: center -70px;
     background-size: auto 134%;
-    background-image: url("../img/hero-tablet.jpg");
+    background-image: url("../img/index/hero-tablet.jpg");
   }
 
-  .products__title {
-    width: 668px;
-    font-size: 43px;
-    line-height: 50px;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/hero-tablet@2x.jpg");
   }
 
-  .products__list {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    z-index: 1;
-    overflow: hidden;
-    padding: 0 50px;
-  }
 
-  .products__list::before {
+  .products__wrapper::after {
     position: absolute;
     content: "";
     width: 100vw;
@@ -128,9 +122,49 @@
     z-index: 10;
   }
 
-  .products__item {
-    width: 50%;
-    padding: 25px 195px 45px 35px;
+
+  .products__title {
+    width: 668px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .products__list {
+    width: 768px;
+    height: 119px;
+    position: relative;
+    display: flex;
+    z-index: 1;
+    overflow: hidden;
+    padding: 0 50px;
+  }
+
+  // .products__list::before {
+  //   position: absolute;
+  //   content: "";
+  //   width: 100vw;
+  //   height: 24px;
+  //   background-image: url("../img/zigzag-fill-tablet.svg");
+  //   background-repeat: repeat-x;
+  //   bottom: 0;
+  //   left: 0;
+  //   z-index: 10;
+  // }
+
+  .products__item--interiors {
+    position: absolute;
+    width: 334px;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+  }
+
+  .products__item--toys {
+    position: absolute;
+    width: 334px;
+    height: 100%;
+    bottom: 0;
+    right: 0;
   }
 
   .products__item--interiors:hover {
@@ -142,14 +176,14 @@
   }
 
   .products__link {
-    padding: 0 0 0 0;
+    padding: 25px 195px 45px 36px;
     font-size: 20px;
     line-height: 30px;
   }
 
   .products__link--interiors::before {
-    top: 4px;
-    right: -158px;
+    top: 30px;
+    right: 37px;
   }
 
   .products__link--interiors:hover::before {
@@ -161,8 +195,8 @@
   }
 
   .products__link--toys::before {
-    top: 6px;
-    right: -162px;
+    top: 30px;
+    right: 34px;
   }
 
   .products__link--toys:hover::before {
@@ -188,9 +222,17 @@
   }
 
   .products__wrapper::before {
-    background-image: url("../img/hero-desktop.jpg");
+    background-image: url("../img/index/hero-desktop.jpg");
     background-position: center -75px;
     background-size: auto 135%;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/hero-tablet@2x.jpg");
+  }
+
+  .products__list {
+    width: 1150px;
   }
 
   .products__list::before {

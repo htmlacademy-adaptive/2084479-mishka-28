@@ -1,0 +1,55 @@
+.control-checkbox__item {
+  position: relative;
+}
+
+.control-checkbox__mark {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background-image: url("../img/form/checked-false.svg");
+  top: -10px;
+  left: -60px;
+}
+
+.control-checkbox__input:checked + .control-checkbox__mark {
+  background-image: url("../img/form/checked-true.svg");
+}
+
+// Tablet
+
+@media (min-width: @tablet) {
+  .control-checkbox__mark {
+    width: 52px;
+    height: 52px;
+    background-image: url("../img/form/checked-false-tablet.svg");
+  }
+
+  .control-checkbox__input:checked + .control-checkbox__mark {
+    background-image: url("../img/form/checked-true-tablet.svg");
+  }
+
+  .control-checkbox__item:hover .control-checkbox__mark {
+    background-image: url("../img/form/checked-false-hover.svg");
+  }
+
+  .control-checkbox__item:hover .control-checkbox__input:checked + .control-checkbox__mark {
+    background-image: url("../img/form/checked-true-hover.svg");
+  }
+
+  .control-checkbox__item:active .control-checkbox__mark {
+    background-image: url("../img/form/checked-false-active.svg");
+  }
+
+  .control-checkbox__item:active .control-checkbox__input:checked + .control-checkbox__mark {
+    background-image: url("../img/form/checked-true-active.svg");
+  }
+}
+
+
+// Desktop
+
+@media (min-width: @desktop) {
+  .control-checkbox__item {
+    padding: 8px 0 0 21px;
+  }
+}

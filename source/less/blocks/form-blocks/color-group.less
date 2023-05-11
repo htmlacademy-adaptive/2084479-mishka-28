@@ -20,8 +20,40 @@
 
 // Tablet
 
-@media (min-width: @tablet) {}
+@media (min-width: @tablet) {
+  .color-group__list {
+    display: grid;
+    grid-template-columns: 240px 240px;
+  }
+
+  .color-group__item {
+    font-size: 19px;
+  }
+}
 
 // Desktop
 
-@media (min-width: @desktop) {}
+@media (min-width: @desktop) {
+  .color-group {
+    width: 875px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: 28px;
+  }
+
+  .color-group__title {
+    position: absolute;
+    top: 20px;
+    left: -100px;
+  }
+
+  .color-group__list {
+    padding: 20px 0 12px 76px;
+    row-gap: 56px;
+    grid-template-columns: 262px 262px 262px;
+  }
+
+  .color-group__item {
+    padding: 0;
+  }
+}

@@ -4,12 +4,11 @@
   padding-bottom: 51px;
 }
 
-.reviews::after {
+.reviews__wrapper::after {
   position: absolute;
   content: "";
   background-image: url("../img/zigzag-line-mobile.svg");
   background-repeat: repeat;
-  width: 1050px;
   height: 6px;
   bottom: 0;
   left: 0;
@@ -92,7 +91,7 @@
 .reviews__prev::before {
   position: absolute;
   content: "";
-  background-image: url("../img/icons/huge-arrow-left.svg");
+  background-image: url("../img/index/huge-arrow-left.svg");
   background-repeat: no-repeat;
   width: 50px;
   height: 26px;
@@ -112,7 +111,7 @@
 .reviews__next::before {
   position: absolute;
   content: "";
-  background-image: url("../img/icons/huge-arrow-right.svg");
+  background-image: url("../img/index/huge-arrow-right.svg");
   background-repeat: no-repeat;
   width: 50px;
   height: 26px;
@@ -124,14 +123,22 @@
 
 @media (min-width: @tablet) {
   .reviews {
-    background-image: url("../img/review-tablet.jpg");
-    background-repeat: no-repeat;
-    margin-top: 81px;
-    padding: 83px 0 104px;
     overflow: hidden;
+    padding: 0;
   }
 
-  .reviews::after {
+  .reviews__wrapper {
+    background-image: url("../img/index/review-tablet.jpg");
+    background-repeat: no-repeat;
+    margin-top: 24px;
+    padding: 83px 0 104px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/review-tablet@2x.jpg");
+  }
+
+  .reviews__wrapper::after {
     background-image: url("../img/zigzag-line-tablet.svg");
     height: 17px;
   }
@@ -203,7 +210,7 @@
     position: absolute;
     font-size: 17px;
     width: 175px;
-    top: 80px;
+    top: 104px;
     right: 50px;
   }
 }
@@ -212,22 +219,32 @@
 
 @media (min-width: @desktop) {
   .reviews {
+    width: 1150px;
+    margin: auto;
+  }
+
+  .reviews__wrapper {
     margin-left: 50px;
-    margin-top: 89px;
+    margin-top: 21px;
     padding: 77px 50px 155px 174px;
   }
 
-  .reviews::after {
+  .reviews__wrapper::after {
     background-image: url("../img/zigzag-line-desktop.svg");
     height: 23px;
+    left: 50px;
+  }
+
+  .reviews__cantainer {
+    padding: 0;
   }
 
   .reviews__title {
     padding: 0;
   }
 
-  .reviews__cantainer {
-    padding: 0;
+  .reviews__button {
+    top: 100px;
   }
 
   .reviews__text {

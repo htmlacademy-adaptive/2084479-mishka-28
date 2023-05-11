@@ -1,7 +1,10 @@
 .main-footer {
+  background-color: @footer-color;
+}
+
+.main-footer__container {
   display: flex;
   justify-content: center;
-  background-color: @footer-color;
   flex-wrap: wrap;
 }
 
@@ -16,7 +19,7 @@
 // Tablet
 
 @media (min-width: @tablet) {
-  .main-footer {
+  .main-footer__container {
     padding: 50px;
     position: relative;
     min-height: 143px;
@@ -46,7 +49,7 @@
 // Desktop
 
 @media (min-width: @desktop) {
-  .main-footer {
+  .main-footer__container {
     margin: 0 auto;
     width: 1150px;
   }

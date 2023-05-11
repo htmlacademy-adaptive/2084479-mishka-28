@@ -36,7 +36,6 @@
 }
 
 .nav-list__svg:hover {
-  opacity: 1;
   fill: @green-light;
 }
 
@@ -86,7 +85,7 @@
     height: 90px;
     width: 1px;
     left: 2px;
-    bottom: 2px;
+    bottom: 0;
   }
 
   .nav-list__link {
@@ -104,7 +103,8 @@
 
   .nav-list__link--card {
     font-size: 17px;
-    padding-left: 84px;
+    padding-left: 86px;
+    padding-bottom: 30px;
   }
 
   .nav-list__link:hover {
@@ -117,7 +117,7 @@
 
   .nav-list__svg {
     top: 33px;
-    left: 35px;
+    left: 33px;
   }
 
   .nav-list__text-tablet {
@@ -193,5 +193,10 @@
 
   .nav-list__svg {
     top: 31px;
+  }
+
+  .nav-list__item--search::after,
+  .nav-list__item--card::after {
+    bottom: 2px;
   }
 }

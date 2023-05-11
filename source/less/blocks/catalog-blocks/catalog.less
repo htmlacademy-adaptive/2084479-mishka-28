@@ -25,7 +25,6 @@
 
 .catalog__item {
   margin-bottom: 28px;
-  border: 1px solid @base-border;
 }
 
 .catalog__button {
@@ -48,7 +47,7 @@
   .catalog__title::before {
     position: absolute;
     content: "";
-    background-image: url("../img/zigzag-fill-tablet.svg");
+    background-image: url("./img/zigzag-fill-tablet.svg");
     background-repeat: repeat-x;
     width: 100%;
     height: 24px;
@@ -57,9 +56,9 @@
   }
 
   .catalog__list {
-    margin: 0;
+    width: 768px;
+    margin: 0 auto;
     padding: 66px 50px 25px;
-    width: 100%;
     gap: 26px;
   }
 
@@ -91,6 +90,8 @@
   }
 
   .catalog__list {
+    margin: auto;
+    width: 1150px;
     min-height: 660px;
     flex-direction: row;
     padding-top: 110px;

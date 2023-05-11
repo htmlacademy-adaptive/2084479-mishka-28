@@ -1,4 +1,5 @@
 .filters__group {
+  position: relative;
   padding: 0;
   margin: 0;
   border-top: 1px @green-light solid;
@@ -21,6 +22,7 @@
   padding: 17px 30px 54px;
 }
 
+
 .filters__discription {
   margin: 0;
   padding-bottom: 30px;
@@ -30,7 +32,7 @@
 }
 
 .filters__button {
-  padding: 16px 0;
+  padding: 16px;
   font-size: 17px;
   line-height: 16px;
   width: 260px;
@@ -50,6 +52,14 @@
 // Tablet
 
 @media (min-width: @tablet) {
+  .filters__container {
+    padding: 50px;
+  }
+
+  .filters__form {
+    padding: 0;
+  }
+
   .filters__title {
     font-size: 43px;
     line-height: 50px;
@@ -71,8 +81,12 @@
     padding: 0;
   }
 
+  .filters__container:nth-child(2n) {
+    background-color: #f1f1f1;
+  }
+
   .filters__discription {
-    padding: 54px 50px 0;
+    padding: 54px 50px 81px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -80,13 +94,62 @@
   .filters__group {
     border: none;
   }
+
+  .filters__footer-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    width: 1150px;
+    margin: 0 auto;
+  }
+
+  .filters__fields-required {
+    padding: 0;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .filters__button {
+    margin: 0;
+    width: 230px;
+  }
 }
+
 
 // Desktop
 
 @media (min-width: @desktop) {
+  .filters__discription {
+    width: 1150px;
+    margin: 0 auto;
+    padding: 100px 225px 14px;
+  }
+
   .filters__title {
     font-size: 53px;
     line-height: 57px;
+    padding-bottom: 112px;
+    padding-top: 28px;
+  }
+
+  .filters__title::before {
+    background-image: url("../img/zigzag-fill-desktop.svg");
+    width: 100%;
+    height: 34px;
+  }
+
+  .filters__container {
+    margin: 0 auto;
+  }
+
+  .filters__container--name {
+    padding-top: 63px;
+  }
+
+  .filters__container--type {
+    width: 1150px;
+    padding-bottom: 16px;
   }
 }
