@@ -1,5 +1,14 @@
 .catalog-item__product-block {
   padding: 29px 27px 27px;
+  border: 1px solid #ececec;
+}
+
+.catalog-item__product-block:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-item__product-block:active {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .catalog-item__product-block--big-text {
@@ -12,6 +21,14 @@
 
 .catalog-item__link {
   line-height: 24px;
+}
+
+.catalog-item__link:hover {
+  opacity: 0.6;
+}
+
+.catalog-item__link:active {
+  opacity: 0.3;
 }
 
 .catalog-item__discription {
@@ -55,6 +72,17 @@
   position: absolute;
   top: 0;
   right: 0;
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.catalog-item__card-icon:hover {
+  opacity: 1;
+  fill: #63d1bb;
+}
+
+.catalog-item__card-icon:active {
+  fill: #63d1bb;
+  opacity: 0.3;
 }
 
 // Tablet

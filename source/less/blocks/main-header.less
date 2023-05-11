@@ -19,10 +19,17 @@
 // Tablet
 
 @media (min-width: @tablet) {
+  .main-header {
+    background: #f1f1f1;
+  }
+
+  .main-header--index {
+    background: #fafafa;
+  }
+
   .main-header__wrapper {
     overflow: hidden;
     padding-top: 88px;
-    background: #fafafa;
   }
 
   .main-header__wrapper::before {
@@ -50,15 +57,11 @@
   .main-header {
     position: relative;
     z-index: 50;
-    background: #f1f1f1;
     overflow: hidden;
   }
 
-  .main-header--index {
-    background: #fafafa;
-  }
-
   .main-header__wrapper {
+    overflow: visible;
     width: 1150px;
     margin: 0 auto;
     padding-top: 0;

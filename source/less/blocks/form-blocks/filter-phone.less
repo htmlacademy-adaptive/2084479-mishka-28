@@ -1,3 +1,7 @@
+.filter-phone {
+  padding-bottom: 36px;
+}
+
 .filter-phone__title {
   margin: 0;
   padding: 0;
@@ -7,52 +11,93 @@
   line-height: 16px;
 }
 
-.filter-phone__input-phone {
+.filter-phone__input {
+  border: none;
   position: relative;
   margin: 0;
   padding: 0;
   padding-top: 19px;
+  font-size: 17px;
+  line-height: 18px;
 }
 
-.filter-phone__input-phone::before {
+.filter-phone__container::after {
   position: absolute;
   content: "";
-  background-image: url("../img/icons/phone.svg");
+  background-image: url("../img/form/phone.svg");
   background-repeat: no-repeat;
   width: 25px;
   height: 24px;
-  top: 16px;
+  top: 14px;
   right: 7px;
+  z-index: 10;
 }
 
 .filter-phone__container {
   position: relative;
-  padding-bottom: 36px;
+  padding-bottom: 18px;
 }
 
 .filter-phone__container::before {
   position: absolute;
   content: "";
   height: 1px;
-  width: 260px;
+  width: 100%;
   border-bottom: 2px solid @base-text;
-  top: 35px;
+  bottom: 0;
   left: 0;
 }
 
-.filter-phone__input {
-  margin: 0;
-  padding: 0;
-  font-size: 17px;
-  line-height: 18px;
-  border: none;
+.filter-phone__container:hover::before {
+  border-color: #62d1ba;
+}
+
+.filter-phone__input:focus,
+.filter-phone__input:active {
+  outline: none;
 }
 
 
 // Tablet
 
-@media (min-width: @tablet) {}
+@media (min-width: @tablet) {
+  .filter-phone__input {
+    font-size: 19px;
+    padding-left: 18px;
+    background-color: transparent;
+  }
+
+  .filter-phone__container::after {
+    right: 26px;
+  }
+}
 
 // Desktop
 
-@media (min-width: @desktop) {}
+@media (min-width: @desktop) {
+  .filter-phone {
+    padding: 0;
+    padding-bottom: 17px;
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  .filter-phone__title {
+    position: absolute;
+    top: 16px;
+    left: -113px;
+  }
+
+  .filter-phone__container {
+    padding-top: 0;
+  }
+
+  .filter-phone__container::after {
+    top: 10px;
+    right: 8px;
+  }
+
+  .filter-phone__input {
+    padding-top: 11px;
+  }
+}

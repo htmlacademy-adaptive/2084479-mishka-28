@@ -1,3 +1,7 @@
+.filter-email {
+  padding-bottom: 36px;
+}
+
 .filter-email__title {
   padding: 0;
   padding-right: 20px;
@@ -6,24 +10,36 @@
   line-height: 16px;
 }
 
-.filter-email__input-email {
+.filter-email__input {
+  border: none;
   position: relative;
+  margin: 0;
+  padding: 0;
+  padding-top: 19px;
+  font-size: 17px;
+  line-height: 18px;
 }
 
-.filter-email__input-email::before {
+.filter-email__container::after {
   position: absolute;
   content: "";
-  background-image: url("../img/icons/mail.svg");
+  background-image: url("../img/form/mail.svg");
   background-repeat: no-repeat;
   width: 32px;
   height: 21px;
-  top: 2px;
+  top: 19px;
   right: 3px;
 }
 
+.filter-email__input:focus,
+.filter-email__input:active {
+  outline: none;
+}
+
+
 .filter-email__container {
   position: relative;
-  padding-bottom: 34px;
+  padding-bottom: 16px;
   padding-top: 2px;
 }
 
@@ -31,25 +47,49 @@
   position: absolute;
   content: "";
   height: 1px;
-  width: 260px;
+  width: 100%;
   border-bottom: 2px solid @base-text;
-  top: 36px;
+  bottom: 0;
   left: 0;
 }
 
-.filter-email__input {
-  margin: 0;
-  padding: 0;
-  font-size: 17px;
-  line-height: 18px;
-  border: none;
+.filter-email__container:hover::before {
+  border-color: #62d1ba;
 }
 
 
 // Tablet
 
-@media (min-width: @tablet) {}
+@media (min-width: @tablet) {
+  .filter-email__input {
+    font-size: 19px;
+    padding-left: 18px;
+    background-color: transparent;
+  }
+
+  .filter-email__container::after {
+    top: 24px;
+    right: 22px;
+  }
+}
 
 // Desktop
 
-@media (min-width: @desktop) {}
+@media (min-width: @desktop) {
+  .filter-email {
+    padding: 0;
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  .filter-email__title {
+    position: absolute;
+    top: 25px;
+    left: -113px;
+  }
+
+  .filter-email__container::after {
+    top: 23px;
+    right: 4px;
+  }
+}

@@ -26,10 +26,29 @@
   width: 100%;
 }
 
+.form-text__input:hover {
+  border-color: #62d1ba;
+}
+
+.form-text__input:focus,
+.form-text__input:active {
+  outline: none;
+  border-color: #62d1ba;
+}
 // Tablet
 
-@media (min-width: @tablet) {}
+@media (min-width: @tablet) {
+  .form-text__title {
+    padding-top: 50px;
+  }
+
+  .form-text__input {
+    font-size: 19px;
+  }
+}
 
 // Desktop
 
-@media (min-width: @desktop) {}
+@media (min-width: @desktop) {
+
+}

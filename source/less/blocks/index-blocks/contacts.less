@@ -4,6 +4,7 @@
 }
 
 .contacts__wrapper {
+  position: relative;
   padding: 0 30px;
 }
 
@@ -66,7 +67,7 @@ address {
   .contacts__wrapper::before {
     position: absolute;
     content: "";
-    background-image: url("../img/icons/flag.svg");
+    background-image: url("../img/index/flag.svg");
     background-repeat: no-repeat;
     width: 47px;
     height: 81px;
@@ -125,21 +126,25 @@ address {
 
 @media (min-width: @desktop) {
   .contacts {
+    width: 1150px;
     position: relative;
+    margin: auto;
+  }
+
+  .contacts__container {
     display: flex;
-    margin: 72px 50px 104px;
+    justify-content: flex-end;
+    padding: 72px 50px 105px 50px;
   }
 
   .contacts__wrapper {
-    padding: 0;
-    width: 525px;
-    padding-left: 173px;
-    padding-top: 80px;
+    padding: 80px 50px 54px 112px;
+    width: 461px;
   }
 
   .contacts__wrapper::before {
-    top: 63px;
-    left: 63px;
+    top: 62px;
+    left: 0;
   }
 
   .contacts__list {
@@ -152,7 +157,7 @@ address {
 
   .contacts__button {
     position: absolute;
-    left: 175px;
-    bottom: 0;
+    left: 225px;
+    bottom: 105px;
   }
 }
