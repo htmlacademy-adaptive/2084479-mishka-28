@@ -42,9 +42,15 @@
 // Tablet
 
 @media (min-width: @tablet) {
+  .input-text {
+    padding: 0;
+  }
+
   .input-text__input {
+    padding-top: 8px;
+    padding-bottom: 8px;
     width: 100%;
-    padding-left: 18px;
+    padding-left: 19px;
     font-size: 19px;
     border-bottom: 2px solid @base-text;
   }
@@ -55,6 +61,7 @@
 
   .input-text__label {
     padding-right: 24px;
+    padding-top: 18px;
     font-size: 19px;
   }
 }
@@ -62,19 +69,12 @@
 // Desktop
 
 @media (min-width: @desktop) {
-  .input-text {
-    padding-bottom: 34px;
-  }
-
-  .input-text:last-child {
-    padding-bottom: 0;
-  }
-
   .input-text__label {
-    padding-top: 6px;
+    padding-top: 18px;
   }
 
   .input-text__input {
-    padding-bottom: 8px;
+    padding-top: 10px;
+    padding-left: 16px;
   }
 }

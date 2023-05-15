@@ -30,17 +30,31 @@
   text-transform: uppercase;
 }
 
+.promo__picture {
+  object-fit: contain;
+  width: 100%;
+}
+
 .promo__price {
-  padding: 16px 10px 25px;
+  padding: 13px 10px 25px;
   margin: 0;
   text-align: center;
   line-height: 24px;
   color: @alternate-text;
 }
 
+.promo__button-card {
+  width: 100%;
+}
+
 // Tablet
 
 @media (min-width: @tablet) {
+  .promo {
+    width: 768px;
+    margin: 0 auto;
+  }
+
   .promo__wrapper {
     overflow: hidden;
     position: relative;
@@ -50,6 +64,7 @@
   .promo__title-container {
     display: flex;
     justify-content: space-between;
+    padding-top: 32px;
   }
 
   .promo__text {
@@ -61,14 +76,16 @@
 
   .promo__picture {
     position: absolute;
+    object-fit: none;
+    width: 334px;
     right: 50px;
-    top: 108px;
+    bottom: 70px;
   }
 
   .promo__price {
     width: 292px;
     font-size: 20px;
-    padding: 26px 0 33px;
+    padding: 29px 0 33px;
   }
 
   .promo__button-card {
@@ -99,7 +116,7 @@
   }
 
   .promo__wrapper {
-    padding: 61px 93px 95px;
+    padding: 30px 50px 94px 92px;
   }
 
   .promo__title-container {
@@ -114,11 +131,12 @@
 
   .promo__picture {
     top: 0;
+    width: 525px;
   }
 
   .promo__price {
     padding: 80px 0 33px;
-    width: 292px;
+    width: 294px;
   }
 
   .promo__text {

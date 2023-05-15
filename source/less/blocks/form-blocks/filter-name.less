@@ -21,35 +21,37 @@
 // Tablet
 
 @media (min-width: @tablet) {
+  .filter-name__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 22px;
+    padding: 0;
+    padding-left: 166px;
+  }
+
   .filter-name__item {
     flex-direction: row;
     font-size: 19px;
   }
 
   .filter-name__title {
-    padding-top: 67px;
+    position: absolute;
+    padding: 0;
+    top: 20px;
+    left: 0;
   }
 }
 
 // Desktop
 
 @media (min-width: @desktop) {
-  .filter-name {
-    padding: 0;
-    margin: 0 auto;
-    width: 700px;
-    padding-left: 4px;
-  }
-
   .filter-name__title {
-    position: absolute;
-    padding: 0;
-    top: 10px;
-    left: -112px;
+    left: 62px;
   }
 
   .filter-name__list {
-    width: 700px;
-    padding: 0;
+    padding-left: 178px;
+    width: 875px;
   }
 }
