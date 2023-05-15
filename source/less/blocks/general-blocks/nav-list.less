@@ -35,14 +35,6 @@
   fill: rgba(0, 0, 0, 0.2);
 }
 
-.nav-list__svg:hover {
-  fill: @green-light;
-}
-
-.nav-list__svg:active {
-  opacity: 0.3;
-}
-
 .nav-list__item--for-desktop {
   display: none;
 }
@@ -107,7 +99,9 @@
     padding-bottom: 30px;
   }
 
-  .nav-list__link:hover {
+  .nav-list__link:hover,
+  .nav-list__link:focus {
+    outline: none;
     opacity: 0.6;
   }
 
@@ -118,6 +112,16 @@
   .nav-list__svg {
     top: 33px;
     left: 33px;
+  }
+
+  .nav-list__svg:hover,
+  .nav-list__svg:focus {
+    fill: @green-light;
+    opacity: 1;
+  }
+
+  .nav-list__svg:active {
+    opacity: 0.3;
   }
 
   .nav-list__text-tablet {

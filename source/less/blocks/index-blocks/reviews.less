@@ -1,7 +1,7 @@
 .reviews {
   position: relative;
   margin-top: 57px;
-  padding-bottom: 51px;
+  padding: 0 30px 50px;
 }
 
 .reviews__wrapper::after {
@@ -14,12 +14,7 @@
   left: 0;
 }
 
-.reviews__cantainer {
-  padding: 0 25px 0 30px;
-}
-
 .reviews__title {
-  padding: 0 30px;
   padding-bottom: 14px;
 }
 
@@ -61,6 +56,8 @@
 
 .reviews__button-slider {
   position: relative;
+  width: 260px;
+  margin: 0 auto;
   margin-bottom: 37px;
   display: flex;
   justify-content: center;
@@ -119,6 +116,9 @@
   left: 35px;
 }
 
+.reviews__button {
+  width: 100%;
+}
 // Tablet
 
 @media (min-width: @tablet) {
@@ -131,7 +131,8 @@
     background-image: url("../img/index/review-tablet.jpg");
     background-repeat: no-repeat;
     margin-top: 24px;
-    padding: 83px 0 104px;
+    padding: 83px 0 105px;
+    width: 768px;
   }
 
   @media (min-resolution: 2dppx) {
@@ -172,7 +173,7 @@
     position: absolute;
     padding: 0;
     bottom: 96px;
-    right: 76px;
+    right: 28px;
     border: none;
   }
 
@@ -249,7 +250,7 @@
 
   .reviews__text {
     padding-top: 37px;
-    padding-bottom: 43px;
+    padding-bottom: 42px;
   }
 
   .reviews__author-name {

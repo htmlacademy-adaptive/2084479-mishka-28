@@ -1,5 +1,5 @@
 .filter-email {
-  padding-bottom: 36px;
+  padding-bottom: 18px;
 }
 
 .filter-email__title {
@@ -14,10 +14,11 @@
   border: none;
   position: relative;
   margin: 0;
-  padding: 0;
-  padding-top: 19px;
+  padding: 19px 0 15px;
   font-size: 17px;
   line-height: 18px;
+  width: 100%;
+  border-bottom: 2px solid @base-text;
 }
 
 .filter-email__container::after {
@@ -43,17 +44,7 @@
   padding-top: 2px;
 }
 
-.filter-email__container::before {
-  position: absolute;
-  content: "";
-  height: 1px;
-  width: 100%;
-  border-bottom: 2px solid @base-text;
-  bottom: 0;
-  left: 0;
-}
-
-.filter-email__container:hover::before {
+.filter-email__input:hover {
   border-color: #62d1ba;
 }
 
@@ -61,14 +52,30 @@
 // Tablet
 
 @media (min-width: @tablet) {
+  .filter-email {
+    padding-bottom: 0;
+  }
+
+  .filter-email__title {
+    position: absolute;
+    top: 8px;
+    left: 0;
+  }
+
+  .filter-email__container {
+    padding-left: 167px;
+    padding-bottom: 0;
+  }
+
   .filter-email__input {
     font-size: 19px;
+    padding-top: 0;
     padding-left: 18px;
     background-color: transparent;
   }
 
   .filter-email__container::after {
-    top: 24px;
+    top: 5px;
     right: 22px;
   }
 }
@@ -76,20 +83,17 @@
 // Desktop
 
 @media (min-width: @desktop) {
-  .filter-email {
-    padding: 0;
-    width: 700px;
-    margin: 0 auto;
+  .filter-email__title {
+    top: 8px;
+    left: 62px;
   }
 
-  .filter-email__title {
-    position: absolute;
-    top: 25px;
-    left: -113px;
+  .filter-email__container {
+    padding-left: 176px;
+    width: 875px;
   }
 
   .filter-email__container::after {
-    top: 23px;
     right: 4px;
   }
 }

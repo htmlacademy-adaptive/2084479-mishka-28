@@ -76,10 +76,14 @@
       </div>
       <ul class="products__list">
         <li class="products__item products__item--interiors">
-          <a class="products__link products__link--interiors" href="#">Предметы <br> интерьера</a>
+          <a class="products__link products__link--interiors" href="#">
+            <span class="products__link-text">Предметы интерьера</span>
+          </a>
         </li>
         <li class="products__item products__item--toys">
-          <a class="products__link products__link--toys" href="#">Детские <br> игрушки</a>
+          <a class="products__link products__link--toys" href="#">
+            <span class="products__link-text">Детские игрушки</span>
+          </a>
         </li>
       </ul>
     </section>
@@ -290,20 +294,33 @@
       </div>
     </div>
   </footer>
-  <section class="modal modal--close">
+  <div class="modal modal--close">
     <div class="modal__container">
-      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+      <h2 class="modal__title">Добавить в корзину</h2>
       <p class="modal__text">Выберите размер:</p>
       <div class="modal__box">
-        <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
-
+        <form class="modal__form feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+          <ul class="feedback-form__list">
+            <li class="feedback-form__item input-modal">
+              <input class="visually-hidden input-modal__input" type="checkbox" name="modal" value="small" id="small" checked>
+              <label class="input-modal__label" for="small"> S </label>
+            </li>
+            <li class="feedback-form__item input-modal">
+              <input class="visually-hidden input-modal__input" type="checkbox" name="modal" value="medium" id="medium">
+              <label class="input-modal__label" for="medium"> M </label>
+            </li>
+            <li class="feedback-form__item input-modal">
+              <input class="visually-hidden input-modal__input" type="checkbox" name="modal" value="large" id="large">
+              <label class="input-modal__label" for="large"> L </label>
+            </li>
+          </ul>
         </form>
+        <button class="modal__button" type="submit">
+          Добавить
+        </button>
       </div>
-      <button class="modal__button" type="submit">
-        Добавить
-      </button>
     </div>
-  </section>
+  </div>
 
   <script src="./js/script.js"></script>
 </body>

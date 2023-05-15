@@ -1,5 +1,5 @@
 .filter-phone {
-  padding-bottom: 36px;
+  padding-bottom: 35px;
 }
 
 .filter-phone__title {
@@ -15,10 +15,11 @@
   border: none;
   position: relative;
   margin: 0;
-  padding: 0;
-  padding-top: 19px;
+  padding: 19px 0 17px;
   font-size: 17px;
   line-height: 18px;
+  border-bottom: 2px solid @base-text;
+  width: 100%;
 }
 
 .filter-phone__container::after {
@@ -35,20 +36,10 @@
 
 .filter-phone__container {
   position: relative;
-  padding-bottom: 18px;
 }
 
-.filter-phone__container::before {
-  position: absolute;
-  content: "";
-  height: 1px;
-  width: 100%;
-  border-bottom: 2px solid @base-text;
-  bottom: 0;
-  left: 0;
-}
-
-.filter-phone__container:hover::before {
+.filter-phone__input:hover {
+  outline: none;
   border-color: #62d1ba;
 }
 
@@ -61,43 +52,42 @@
 // Tablet
 
 @media (min-width: @tablet) {
+  .filter-phone__title {
+    position: absolute;
+    top: 16px;
+    left: 0;
+  }
+
   .filter-phone__input {
+    padding: 13px 18px 15px;
     font-size: 19px;
-    padding-left: 18px;
     background-color: transparent;
   }
 
+  .filter-phone__container {
+    padding-left: 167px;
+  }
+
   .filter-phone__container::after {
-    right: 26px;
+    top: 11px;
+    right: 25px;
   }
 }
 
 // Desktop
 
 @media (min-width: @desktop) {
-  .filter-phone {
-    padding: 0;
-    padding-bottom: 17px;
-    width: 700px;
-    margin: 0 auto;
-  }
-
-  .filter-phone__title {
-    position: absolute;
-    top: 16px;
-    left: -113px;
-  }
-
   .filter-phone__container {
-    padding-top: 0;
+    padding-left: 176px;
+    width: 875px;
   }
 
   .filter-phone__container::after {
-    top: 10px;
+    top: 12px;
     right: 8px;
   }
 
-  .filter-phone__input {
-    padding-top: 11px;
+  .filter-phone__title {
+    left: 62px;
   }
 }
