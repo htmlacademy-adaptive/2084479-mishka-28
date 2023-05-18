@@ -34,11 +34,6 @@
   padding-bottom: 14px;
 }
 
-.input-text__input:focus,
-.input-text__input:active {
-  outline: none;
-}
-
 // Tablet
 
 @media (min-width: @tablet) {
@@ -53,6 +48,16 @@
     padding-left: 19px;
     font-size: 19px;
     border-bottom: 2px solid @base-text;
+  }
+
+  .input-text__input:hover,
+  .input-text__input:focus {
+    outline: none;
+    border-color: #62d1ba;
+  }
+
+  .input-text__input:active {
+    border-color: #62d1ba;
   }
 
   .input-text::before {

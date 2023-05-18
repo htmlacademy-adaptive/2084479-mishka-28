@@ -38,17 +38,6 @@
   position: relative;
 }
 
-.filter-phone__input:hover {
-  outline: none;
-  border-color: #62d1ba;
-}
-
-.filter-phone__input:focus,
-.filter-phone__input:active {
-  outline: none;
-}
-
-
 // Tablet
 
 @media (min-width: @tablet) {
@@ -62,6 +51,16 @@
     padding: 13px 18px 15px;
     font-size: 19px;
     background-color: transparent;
+  }
+
+  .filter-phone__input:hover,
+  .filter-phone__input:focus {
+    outline: none;
+    border-color: #62d1ba;
+  }
+
+  .filter-phone__input:active {
+    border-color: #62d1ba;
   }
 
   .filter-phone__container {
@@ -88,6 +87,8 @@
   }
 
   .filter-phone__title {
+    padding: 0;
     left: 62px;
+    width: 100px;
   }
 }

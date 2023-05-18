@@ -32,20 +32,10 @@
   right: 3px;
 }
 
-.filter-email__input:focus,
-.filter-email__input:active {
-  outline: none;
-}
-
-
 .filter-email__container {
   position: relative;
   padding-bottom: 16px;
   padding-top: 2px;
-}
-
-.filter-email__input:hover {
-  border-color: #62d1ba;
 }
 
 
@@ -67,6 +57,11 @@
     padding-bottom: 0;
   }
 
+  .filter-email__container::after {
+    top: 5px;
+    right: 22px;
+  }
+
   .filter-email__input {
     font-size: 19px;
     padding-top: 0;
@@ -74,9 +69,14 @@
     background-color: transparent;
   }
 
-  .filter-email__container::after {
-    top: 5px;
-    right: 22px;
+  .filter-email__input:hover,
+  .filter-email__input:focus {
+    outline: none;
+    border-color: #62d1ba;
+  }
+
+  .filter-email__input:active {
+    border-color: #62d1ba;
   }
 }
 
@@ -84,7 +84,9 @@
 
 @media (min-width: @desktop) {
   .filter-email__title {
-    top: 8px;
+    width: 100px;
+    padding: 0;
+    top: 6px;
     left: 62px;
   }
 
