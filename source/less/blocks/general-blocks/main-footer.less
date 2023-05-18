@@ -24,30 +24,27 @@
 
 @media (min-width: @tablet) {
   .main-footer__container {
-    width: 768px;
+    justify-content: space-between;
     position: relative;
     min-height: 143px;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-  .main-footer__wrapper {
-    display: flex;
-    min-width: 668px;
-    align-items: flex-start;
-    justify-content: space-between;
+    padding: 50px;
   }
 
   .main-footer__logo {
     display: block;
   }
 
-  .main-footer__logo-svg:hover {
+  .main-footer__logo:focus {
+    outline: none;
+  }
+
+  .main-footer__logo:hover .main-footer__logo-svg,
+  .main-footer__logo:focus .main-footer__logo-svg {
     fill: #46c1ae;
   }
 
-  .main-footer__logo-svg:active {
+  .main-footer__logo:active {
     opacity: 0.3;
   }
 }

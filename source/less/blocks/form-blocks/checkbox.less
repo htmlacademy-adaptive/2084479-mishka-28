@@ -45,6 +45,24 @@
   .checkbox__input:checked + .checkbox__label::before {
     background-image: url("../img/form/checked-true-tablet.svg");
   }
+
+  .checkbox__input:hover + .checkbox__label::before,
+  .checkbox__input:focus + .checkbox__label::before {
+    background-image: url("../img/form/checked-false-hover.svg");
+  }
+
+  .checkbox__input:hover:checked + .checkbox__label::before,
+  .checkbox__input:focus:checked + .checkbox__label::before {
+    background-image: url("../img/form/checked-true-hover.svg");
+  }
+
+  .checkbox__input:active + .checkbox__label::before {
+    background-image: url("../img/form/checked-false-active.svg");
+  }
+
+  .checkbox__input:active:checked + .checkbox__label::before {
+    background-image: url("../img/form/checked-true-active.svg");
+  }
 }
 
 // Desktop

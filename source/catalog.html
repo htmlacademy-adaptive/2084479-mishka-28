@@ -96,7 +96,7 @@
               </div>
               <div class="catalog-item__price-wrapper">
                 <p class="catalog-item__price">1 200 руб.</p>
-                <a class="catalog-item__button">
+                <a href="#" class="catalog-item__button">
                   <svg class="catalog-item__card-icon" width="21" height="18" viewBox="0 0 21 18" aria-hidden="true"
                     focusable="false" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="./img/sprite.svg#card"></use>
@@ -128,7 +128,7 @@
               </div>
               <div class="catalog-item__price-wrapper">
                 <p class="catalog-item__price">690 руб.</p>
-                <a class="catalog-item__button">
+                <a href="#" class="catalog-item__button">
                   <svg class="catalog-item__card-icon" width="21" height="18" viewBox="0 0 21 18" aria-hidden="true"
                     focusable="false" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="./img/sprite.svg#card"></use>
@@ -160,7 +160,7 @@
               </div>
               <div class="catalog-item__price-wrapper">
                 <p class="catalog-item__price">1 500 руб.</p>
-                <a class="catalog-item__button">
+                <a href="#" class="catalog-item__button">
                   <svg class="catalog-item__card-icon" width="21" height="18" viewBox="0 0 21 18" aria-hidden="true"
                     focusable="false" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="./img/sprite.svg#card"></use>
@@ -194,7 +194,7 @@
           </button>
           <p class="production__discription">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о
             том, как появляются наши товары.</p>
-          <a class="catalog__button button">Сделать заказ</a>
+          <a href="#" class="catalog__button button">Сделать заказ</a>
         </div>
       </div>
     </section>
@@ -252,6 +252,34 @@
       </div>
     </div>
   </footer>
+  <div class="modal modal--close">
+    <div class="modal__container">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__text">Выберите размер:</p>
+      <div class="modal__box">
+        <form class="modal__form feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+          <ul class="feedback-form__list">
+            <li class="feedback-form__item input-modal">
+              <input class="visually-hidden input-modal__input" type="checkbox" name="modal" value="small" id="small"
+                checked>
+              <label class="input-modal__label" for="small"> S </label>
+            </li>
+            <li class="feedback-form__item input-modal">
+              <input class="visually-hidden input-modal__input" type="checkbox" name="modal" value="medium" id="medium">
+              <label class="input-modal__label" for="medium"> M </label>
+            </li>
+            <li class="feedback-form__item input-modal">
+              <input class="visually-hidden input-modal__input" type="checkbox" name="modal" value="large" id="large">
+              <label class="input-modal__label" for="large"> L </label>
+            </li>
+          </ul>
+        </form>
+        <button class="modal__button" type="submit">
+          Добавить
+        </button>
+      </div>
+    </div>
+  </div>
   <script src="./js/script.js"></script>
 </body>
 

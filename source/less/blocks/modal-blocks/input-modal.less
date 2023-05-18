@@ -1,3 +1,10 @@
-.input-modal__label + .input-modal__input:checked {
+.input-modal__label {
+  border: 2px solid rgba(68, 68, 68, 0.1);
+  padding: 16px;
+  display: block;
+  cursor: pointer;
+}
+
+.input-modal__input:checked + .input-modal__label {
   border-color: #63d1bb;
 }

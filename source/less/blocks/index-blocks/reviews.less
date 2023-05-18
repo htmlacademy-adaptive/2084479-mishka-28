@@ -4,7 +4,8 @@
   padding: 0 30px 50px;
 }
 
-.reviews__wrapper::after {
+.reviews::after {
+  width: 100%;
   position: absolute;
   content: "";
   background-image: url("../img/zigzag-line-mobile.svg");
@@ -76,85 +77,76 @@
   z-index: 1;
 }
 
-.reviews__prev {
+.reviews__prev,
+.reviews__next {
+  cursor: pointer;
   padding: 13px 42px 13px 38px;
   position: relative;
   width: 130px;
-  height: 52px;
+  height: 50px;
   border: none;
   background-color: @base-color;
 }
 
-.reviews__prev::before {
+.reviews__prev::before,
+.reviews__next::before {
   position: absolute;
   content: "";
   background-image: url("../img/index/huge-arrow-left.svg");
   background-repeat: no-repeat;
-  width: 50px;
+  width: 52px;
   height: 26px;
   top: 13px;
-  left: 35px;
-}
-
-.reviews__next {
-  padding: 13px 42px 13px 38px;
-  position: relative;
-  width: 130px;
-  height: 52px;
-  border: none;
-  background-color: @base-color;
+  left: 38px;
 }
 
 .reviews__next::before {
-  position: absolute;
-  content: "";
   background-image: url("../img/index/huge-arrow-right.svg");
-  background-repeat: no-repeat;
-  width: 50px;
-  height: 26px;
-  top: 13px;
-  left: 35px;
 }
 
 .reviews__button {
   width: 100%;
 }
+
+
 // Tablet
 
 @media (min-width: @tablet) {
   .reviews {
+    background-image: url("../img/index/review-tablet.jpg");
+    background-repeat: no-repeat;
     overflow: hidden;
     padding: 0;
+    padding-bottom: 83px;
+    margin: 0;
   }
 
   .reviews__wrapper {
-    background-image: url("../img/index/review-tablet.jpg");
-    background-repeat: no-repeat;
-    margin-top: 24px;
-    padding: 83px 0 105px;
-    width: 768px;
+    position: relative;
+    margin: 0;
+    padding: 83px 50px 47px;
   }
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/index/review-tablet@2x.jpg");
   }
 
-  .reviews__wrapper::after {
+  .reviews::after {
     background-image: url("../img/zigzag-line-tablet.svg");
     height: 17px;
   }
 
-  .reviews__title {
-    padding: 0 50px;
+  .reviews__cantainer {
+    position: relative;
   }
 
-  .reviews__cantainer {
-    padding: 0 50px;
+  .reviews__list {
+    padding: 0;
   }
 
   .reviews__text {
     font-size: 17px;
-    padding-top: 38px;
+    padding-top: 24px;
     padding-bottom: 60px;
   }
 
@@ -162,6 +154,7 @@
     display: flex;
     flex-direction: column;
     font-size: 18px;
+    width: 400px;
   }
 
   .reviews__nikname {
@@ -170,49 +163,39 @@
   }
 
   .reviews__button-slider {
+    border: none;
     position: absolute;
     padding: 0;
-    bottom: 96px;
-    right: 28px;
-    border: none;
+    margin: 0;
+    right: 0;
+    bottom: 5px;
+    width: 178px;
   }
 
   .reviews__button-slider::before {
     display: none;
   }
 
+  .reviews__next,
   .reviews__prev {
-    width: 78px;
-    padding-right: 50px;
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+    padding: 11px 0;
+    width: 89px;
   }
 
-  .reviews__next {
-    width: 78px;
-    padding-right: 40px;
+  .reviews__next::before {
+    left: 21px;
+  }
 
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+  .reviews__prev::before {
+    left: 22px;
   }
 
   .reviews__button {
+    margin: 0;
     position: absolute;
-    font-size: 17px;
-    width: 175px;
-    top: 104px;
+    top: 79px;
     right: 50px;
+    width: 175px;
   }
 }
 
@@ -220,20 +203,18 @@
 
 @media (min-width: @desktop) {
   .reviews {
-    width: 1150px;
-    margin: auto;
+    margin: 0 auto;
+    width: 1050px;
   }
 
   .reviews__wrapper {
-    margin-left: 50px;
-    margin-top: 21px;
-    padding: 77px 50px 155px 174px;
+    margin: 0;
+    padding: 77px 0 100px 174px;
   }
 
-  .reviews__wrapper::after {
+  .reviews::after {
     background-image: url("../img/zigzag-line-desktop.svg");
     height: 23px;
-    left: 50px;
   }
 
   .reviews__cantainer {
@@ -245,19 +226,16 @@
   }
 
   .reviews__button {
-    top: 100px;
+    top: 77px;
+    right: 0;
   }
 
   .reviews__text {
-    padding-top: 37px;
+    padding-top: 35px;
     padding-bottom: 42px;
   }
 
   .reviews__author-name {
     font-size: 17px;
-  }
-
-  .reviews__button-slider {
-    bottom: 150px;
   }
 }

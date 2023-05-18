@@ -1,9 +1,15 @@
-.logo {
-  &:hover {
-    opacity: 0.6;
-  }
+// Tablet
 
-  &:active {
-    opacity: 0.3;
+@media (min-width: @tablet) {
+  .logo {
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+      outline: none;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

@@ -1,5 +1,5 @@
 .contacts {
-  margin-top: 38px;
+  margin-top: 40px;
   margin-bottom: 38px;
 }
 
@@ -52,11 +52,21 @@ address {
   font-style: normal;
 }
 
+.contacts__button {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contacts__button-wrapper {
+  padding: 0 30px;
+}
+
 // Tablet
 
 @media (min-width: @tablet) {
   .contacts {
-    margin-bottom: 57px;
+    margin-top: 40px;
+    margin-bottom: 56px;
   }
 
   .contacts__wrapper {
@@ -98,8 +108,10 @@ address {
 
   .contacts__link--email {
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       color: #46c1ae;
+      outline: none;
     }
   }
 
@@ -159,5 +171,9 @@ address {
     position: absolute;
     left: 225px;
     bottom: 105px;
+  }
+
+  .contacts__button-wrapper {
+    padding: 0;
   }
 }

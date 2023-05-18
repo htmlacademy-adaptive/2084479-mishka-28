@@ -37,16 +37,15 @@
   display: block;
 }
 
-.radio__input:focus + .radio__label::before {
-  border-color: #62d1ba;
-}
-
 // Tablet
 
 @media (min-width: @tablet) {
   .radio__label {
     font-size: 19px;
     line-height: 18px;
+    min-height: 50px;
+    width: 500px;
+    padding-left: 77px;
   }
 
   .radio__label::before {
@@ -59,22 +58,18 @@
     content: "";
     width: 20px;
     height: 20px;
-  }
-}
-
-@media (min-width: @tablet) {
-  .radio__label {
-    min-height: 50px;
-    width: 500px;
-    padding-left: 77px;
-  }
-
-  .radio__label::after {
     top: 15px;
     left: 15px;
   }
-}
 
+  .radio__input:hover + .radio__label::before {
+    border-color: #62d1ba;
+  }
+
+  .radio__input:focus + .radio__label::before {
+    border-color: #62d1ba;
+  }
+}
 
 // Desktop
 

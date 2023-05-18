@@ -23,15 +23,20 @@
 @media (min-width: @tablet) {
   .social {
     width: auto;
-    padding-top: 7px;
-    border: none;
+    padding: 0;
+    border: 0;
   }
 
-  .social__svg:hover {
+  .social__link:focus {
+    outline: none;
+  }
+
+  .social__link:hover .social__svg,
+  .social__link:focus .social__svg {
     fill: #46c1ae;
   }
 
-  .social__svg:active {
+  .social__link:active .social__svg {
     opacity: 0.3;
   }
 }
