@@ -12,7 +12,15 @@
 // Tablet
 
 @media (min-width: @tablet) {
-  .input-modal__input:hover + .input-modal__label {
+  .input-modal__label:hover {
     border-color: rgba(68, 68, 68, 0.3);
+  }
+
+  .input-modal__input:focus + .input-modal__label {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+
+  .input-modal__input:active + .input-modal__label {
+    border-color: #63d1bb;
   }
 }

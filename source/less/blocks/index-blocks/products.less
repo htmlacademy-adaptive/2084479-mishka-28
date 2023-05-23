@@ -259,11 +259,12 @@
     background-image: url("../img/index/hero-desktop.jpg");
     background-position: center -75px;
     background-size: auto 135%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/hero-desktop@2x.jpg");
+    }
   }
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/index/hero-tablet@2x.jpg");
-  }
 
   .products__list {
     width: 1050px;
