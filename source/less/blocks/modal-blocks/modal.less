@@ -61,6 +61,8 @@
   background-color: #63d1bb;
 }
 
+// Tablet
+
 @media (min-width: @tablet) {
   .modal__container {
     width: 566px;
@@ -82,5 +84,15 @@
 
   .modal__box {
     width: 350px;
+  }
+
+  .modal__button:hover,
+  .modal__button:focus {
+    outline: none;
+    background-color: #59d5bc;
+  }
+
+  .modal__button:active {
+    opacity: 0.3;
   }
 }

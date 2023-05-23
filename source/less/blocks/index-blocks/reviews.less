@@ -57,7 +57,6 @@
 
 .reviews__button-slider {
   position: relative;
-  width: 260px;
   margin: 0 auto;
   margin-bottom: 37px;
   display: flex;
@@ -85,7 +84,7 @@
   width: 130px;
   height: 50px;
   border: none;
-  background-color: @base-color;
+  background-color: transparent;
 }
 
 .reviews__prev::before,
@@ -119,16 +118,16 @@
     padding: 0;
     padding-bottom: 83px;
     margin: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/review-tablet@2x.jpg");
+    }
   }
 
   .reviews__wrapper {
     position: relative;
     margin: 0;
     padding: 83px 50px 47px;
-  }
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/index/review-tablet@2x.jpg");
   }
 
   .reviews::after {
@@ -180,6 +179,16 @@
   .reviews__prev {
     padding: 11px 0;
     width: 89px;
+  }
+
+  .reviews__next:hover,
+  .reviews__prev:hover {
+    opacity: 0.6;
+  }
+
+  .reviews__next:active,
+  .reviews__prev:active {
+    opacity: 0.3;
   }
 
   .reviews__next::before {
