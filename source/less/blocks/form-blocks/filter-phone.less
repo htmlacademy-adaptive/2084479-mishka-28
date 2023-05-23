@@ -15,7 +15,7 @@
   border: none;
   position: relative;
   margin: 0;
-  padding: 19px 0 17px;
+  padding: 19px 40px 17px 0;
   font-size: 17px;
   line-height: 18px;
   border-bottom: 2px solid @base-text;
@@ -41,6 +41,10 @@
 // Tablet
 
 @media (min-width: @tablet) {
+  .filter-phone {
+    padding-bottom: 22px;
+  }
+
   .filter-phone__title {
     position: absolute;
     top: 16px;
@@ -48,7 +52,7 @@
   }
 
   .filter-phone__input {
-    padding: 13px 18px 15px;
+    padding: 13px 60px 15px 18px;
     font-size: 19px;
     background-color: transparent;
   }
@@ -88,6 +92,7 @@
 
   .filter-phone__title {
     padding: 0;
+    top: 18px;
     left: 62px;
     width: 100px;
   }
